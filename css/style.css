@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container {
+    width: 50vw;
+    height: 30vh;
+    border: 2px solid rgb(0, 0, 0);
+    position: relative;
+}
+
+.dino {
+    width: 2vw;
+    height: 6vh;
+    border: 1px solid rgb(128, 128, 128);
+    background-color: darkgray;
+    position: absolute;
+    bottom: 0;
+}
+
+.jumpingDino {
+    animation: jump 1s linear;
+}
+
+
+.cactus {
+    width: 1.5vw;
+    height: 5vh;
+    border: 2px solid darkgrey;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: calc(100% - 3vw);
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 10vh;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
